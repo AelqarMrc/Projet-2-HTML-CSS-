@@ -1,1 +1,1 @@
-Voici le prjet n°2
+Voici le projet n°2
