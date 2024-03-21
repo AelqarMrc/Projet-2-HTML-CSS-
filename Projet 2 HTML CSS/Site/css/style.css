@@ -40,7 +40,6 @@ body {
 
 
 
-
 /** HEADER **/
 
 
@@ -48,7 +47,7 @@ body {
 
 header{
     padding-bottom: 2em;
-
+    
 }
 
 .head-container{
@@ -59,7 +58,7 @@ header{
     
 }
 .menu{
-
+    
     gap: 68px;
     display: flex;
     list-style: none;
@@ -114,10 +113,21 @@ header{
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    
     .menu{
         width: 100%;
     }
+    
+    .menu ul{
+        padding: 0;
+    }
+
+    .menu ul li a:hover::before{
+        top: 200%;
+        width: 100%; 
+        height: 2px;
+    }
+
 }
 
 
@@ -147,7 +157,7 @@ footer {
 }
 
 .item li{
-
+    
     display: flex;
     flex-direction: column; 
     margin-bottom: 1.1em;
@@ -162,10 +172,15 @@ footer {
     
 }
 @media (max-width: 767.98px) {
+    
     footer{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
+
+
+    
 
 }
 
@@ -287,6 +302,12 @@ a {
 }
 
 
+@media (max-width: 767.98px) {
+    .main-container{
+        padding: 0;
+    }
+    
+}
 
 
 
@@ -310,6 +331,24 @@ a {
     box-sizing: border-box;
 }
 
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+}
 
 
 
@@ -336,13 +375,14 @@ a {
     justify-content: space-between;
     padding-top: 1em;
     gap: 2.5em;
-   
+    
 }
 .ligne2{
     display: flex;
     justify-content: space-between;
     padding-top: 1em;
     gap: 2.5em;
+    padding-bottom: 2em;
     
 }
 
@@ -355,9 +395,6 @@ a {
     width: 33%;
 }
 
-.ligne2{
-    padding-bottom: 2em;
-}
 
 .hebergements-cards .card{
     display: flex;
@@ -409,6 +446,16 @@ a {
 .hebergements-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -490,59 +537,103 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .hebergements {
-        width: 100%;
-    }
-
+    
     .populaires {
         width: 100%;
         margin-bottom: 35px;
     }
-
+    
     .populaires-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
+    
     .populaires-cards a {
         width: 30%;
     }
-
+    
     .populaires-cards .card-title {
         font-size: 14px;
     }
-
+    
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
 }
 
-/* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
-   
+
+    
+    .hebergements-and-populaires .hebergements{
+        background: none;
+    }
+    
+    
+    .populaires-cards a{
+        width: 100%;
+    }
+    
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .hebergements {
+        width: 100%;
+        
+    }
+
+    .hebergements i{
+        display: none;
+    }
+
+    .ligne1, .ligne2{
+        flex-direction: column;
+        
+    }
+    
+    .ligne1 .hebergements-cards{
+        width: 100%;
+    }
+    .ligne2 .hebergements-cards{
+        width: 100%;
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
