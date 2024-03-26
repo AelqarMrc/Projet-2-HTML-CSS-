@@ -649,6 +649,8 @@ footer {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        padding-right: 0;
+        gap: 1.5em;
     }
 
 
