@@ -33,7 +33,9 @@ body {
     margin: 0;
 }
 @media (max-width: 1024px) {
-    
+    body{
+        padding: 0 2.5em;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -42,7 +44,11 @@ body {
     }
 }
 
-
+@media (min-width: 1440px) {
+    div.main-container{
+        width: 1440px;
+    }
+}
 
 
 
@@ -103,6 +109,7 @@ header{
 @media (max-width: 1024px) {
     
 }
+
 @media (max-width: 767.98px) {
     .head-container{
         flex-wrap: wrap;
@@ -125,6 +132,9 @@ header{
         cursor: pointer;
     }
 
+    .head-container{
+        margin-top: 1em;
+    }
 }
 
 
@@ -203,6 +213,8 @@ p.titre {
     padding: 0;
     display: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 7px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
+    right: 0.5em;
 }
 
 .iconSize{
@@ -216,8 +228,11 @@ p.titre {
 
 
 @media (max-width: 1024px) {
-    
+    .browser{
+        padding-bottom: 2em;
+    }
 }
+
 @media (max-width: 767.98px) {
 
     .iconSize{
@@ -235,6 +250,10 @@ p.titre {
     }
     .btn{
         display: none;
+    }
+    
+    .formulaire p.titre{
+        padding-top: 1.5em;
     }
 }
 
@@ -334,8 +353,21 @@ p.titre {
 
 
 @media (max-width: 1024px) {
-    
+    .filtre-recherche{
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .filtre-recherche h3{
+        margin-top: 0.2em;
+        margin-bottom: 0;
+    }
+
 }
+
+
+
 @media (max-width: 767.98px) {
     
     #filtre-recherche{
@@ -398,6 +430,9 @@ p.titre {
     box-sizing: border-box;
     
 }
+main>*:not(#ancre-hebergements){
+    padding:0 1em !important;
+}
 
 a {
     color: inherit;
@@ -443,7 +478,7 @@ a {
     .main-container{
         padding: 0;
     }
-    
+
 }
 
 
@@ -712,11 +747,24 @@ a {
 
 @media (max-width: 767.98px) {
 
+    .hebergements-and-populaires section{
+        padding: 20px;
+    }
+
+    .hebergements-and-populaires .section-title{
+        padding: 0;
+    }
     
     .hebergements-and-populaires .hebergements{
         background: none;
     }
+    .hebergements-and-populaires .card{
+        margin-top: 1em;
+    }
     
+    .populaires{
+        margin: 0;
+    }
     
     .populaires-cards a{
         width: 100%;
@@ -725,12 +773,12 @@ a {
     .populaires-cards {
         display: flex;
         flex-direction: column;
-        
     }
+
 
     .hebergements {
         width: 100%;
-        
+        padding-top: 0;
     }
 
     .hebergements i{
@@ -757,7 +805,9 @@ a {
     .ligne2 .hebergements-cards{
         width: 100%;
     }
-    
+    .card{
+        width: unset;
+    }
     
 }
 
@@ -788,9 +838,10 @@ a {
 
 .activites-cards{
     display: flex;
-    padding-right: 3em;
+    padding-right: 2.5em;
     justify-content: space-between;
     gap: 2em;
+    height: 100%;
 }
 
 .activites-cards .card{
@@ -805,29 +856,60 @@ a {
 
 .activites-cards img {
     width: 100%;
-    height: 380px;
+    height: calc(100% - 60px);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
 }
 
 .activites-cards h3.card-title{
-    margin-left: 1em;
+    height: 60px;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 1em;
+}
+
+.section-title{
+    padding-left: 0.7em;
+}
+
+.activites-cards{
+    padding-left: 1em;
 }
 
 @media (max-width: 1024px) {
-    
+    .activites-cards img{
+        height: calc(17em - 60px);
+    }
 }
 
 @media (max-width: 767.98px) {
+    
     .activites{
-        width: auto;
+        width: unset;
     }
 
     .activites-cards{
         flex-direction: column;
         padding-right: 1.5em;
+        gap: 1em;
     } 
-   
+    
+    .activites-cards .card{
+        margin: 0;
+
+    }
+
+    .activites-cards img{
+        height: calc(15em - 60px);
+    }
+
+    .activites h2.section-title{
+        padding-top: 2.5em;
+        padding-bottom: 1em;
+    }
 }
 
 
@@ -851,7 +933,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 3em;
+    padding-left: 2em;
     
 }
 footer div{
@@ -881,10 +963,13 @@ footer div{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        padding-right: 0;
+        padding: 2em;
         gap: 1.5em;
     }
 
+    footer div{
+        width: unset;
+    }
 
     
 
